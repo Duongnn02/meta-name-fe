@@ -1,0 +1,313 @@
+.page-2fa {
+    background-color: #f1ecec8a !important;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.header-fa {
+    /* background-color: #4267b2;
+    border-bottom: 1px solid #29487d;
+    height: 42px;
+    display: flex;
+    align-items: center; */
+    padding: 0 50px;
+}
+.container-header {
+    /* width: 52%; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .logo {
+    color: #fff;
+    font-size: 22px;
+    filter: blur(0.5px);
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 104px;
+    padding: 0 5px;
+} */
+#logout a {
+ background-color: var(--primary-button);
+ color: #fff;
+ margin-left: 50px;
+ padding: 10px 20px;
+ border-radius: 5px;
+ font-weight: 600;
+ margin-bottom: 10px;
+ cursor: pointer;
+}
+.main-2fa {
+    width: 52%;
+    margin: 0 auto;
+}
+.fa-main{
+    width: 700px;
+    margin: 80px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+.title-2fa {
+    font-size: 17px;
+    font-weight: 700;
+}
+.setup-2fa{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.input-2fa {
+    margin-top: 3px;
+    padding-left: 3px;
+}
+.description-2fa {
+    font-size: 14px;
+    font-weight: 400;
+}
+.setup {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+.end-2fa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.abc {
+    margin: 10px 0;
+}
+.link-2fa {
+    color: var(--primary-button);
+    font-weight: 500;
+}
+.link-2fa:hover  {
+    text-decoration: underline;
+}
+.submit-code-2fa {
+    border: none;
+    background-color: #2a5eb7;
+    color: #fff;
+    padding: 5px 7px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .2s linear;
+}
+.submit-code-2fa:hover {
+    background-color: #4267b2;
+}
+.footer-2fa {
+    width: 100%;
+    height: 430px;
+    background-color: #fff;
+}
+.footer-box {
+    margin: 0 auto;
+    width: 57%;
+    display: flex;
+}
+.footer-lang {
+    margin-top: 15%;
+}
+.footer-title {
+    margin-right: 10px;
+}
+.footer-title-2 {
+    margin-right: 15px;
+}
+.footer-title-3 {
+    margin-top: 20px;
+}
+.footer-title a, .footer-title-2 a ,.footer-title-3 a{
+    font-size: 12px;
+    color: #737373;
+    white-space: nowrap;
+}
+.footer-lang {
+    display: flex;
+}
+.footer-title a:hover, .footer-title-2 a:hover ,.footer-title-3 a:hover {
+    text-decoration: underline;
+}
+.footer-two {
+    display: flex;
+}
+.under {
+    width: 52%;
+    margin: 10px auto;
+}
+  @media screen and (max-width: 1700px) {
+    .main-2fa {
+         width: 90%; /* Set the desired width */
+         margin: 0 auto; /* Center the element by adding automatic left and right margins */
+         padding: 10px; /* Add padding if needed */
+     }
+     .footer-box {
+         width: 90%;
+         flex-direction: column;
+         align-items: center;
+         text-align: center; /* Center text within the footer */
+  }
+
+  .footer-lang {
+    margin-top: 10%;
+  }
+  .footer-2fa {
+    height: auto;
+}
+    }
+  @media screen and (max-width: 768px) {
+    .container-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logout a {
+      margin-top: 10px;
+    }
+    .main-2fa {
+         width: 90%; /* Đặt chiều rộng cho thiết bị di động */
+         margin: 0 auto; /* Căn giữa nội dung */
+         padding: 10px; /* Thêm padding để tạo khoảng trắng xung quanh nội dung */
+       }
+    .fa-main {
+      width: 90%;
+    }
+  
+    .end-2fa {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-box {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-lang {
+      margin-top: 10%;
+    }
+    .container-header {
+         flex-direction: column;
+         align-items: flex-start;
+       }
+     
+       .logout a {
+         margin-top: 10px;
+       }
+     
+       .fa-main {
+         width: 90%;
+         margin: 80px 5%;
+       }
+     
+       .end-2fa {
+         flex-direction: column;
+         align-items: flex-start;
+       }
+  }
+  /* Responsive styles for phones (max-width: 576px) */
+@media screen and (max-width: 576px) {
+    .main-2fa {
+         width: 90%; /* Đặt chiều rộng cho thiết bị di động */
+         margin: 0 auto;
+         margin-bottom: 50px;
+         padding: 10px; /* Thêm padding để tạo khoảng trắng xung quanh nội dung */
+       }
+     
+       .fa-main {
+         width: 100%; /* Chiếm toàn bộ chiều rộng của .main-2fa */
+         margin: 0; /* Loại bỏ margin */
+       }
+    .header-fa {
+      padding: 0 20px;
+    }
+  
+    .container-header {
+      flex-direction: row;
+      align-items: center;
+    }
+    .button-2fa-sm {
+      margin-right: -150px;
+    }
+    .logout a {
+      margin-top: 10px;
+    }
+  
+    .fa-main {
+      width: 90%;
+      margin: 50px 5%;
+    }
+  
+    .end-2fa {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-box {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-lang {
+      margin-top: 10%;
+    }
+    
+  }
+  
+  /* Responsive styles for small phones (max-width: 378px) */
+  @media screen and (max-width: 378px) {
+    .header-fa {
+      padding: 0 10px;
+    }
+  
+    .container-header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logout a {
+      margin-top: 10px;
+    }
+    .title-2fa {
+         font-size: 14px; /* Adjust font size for the title */
+     }
+ 
+     .setup-2fa {
+         font-size: 12px; /* Adjust font size for setup text */
+     }
+    .fa-main {
+      width: 90%;
+      margin: 40px 5%;
+    }
+  
+    .end-2fa {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-box {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-lang {
+      margin-top: 10%;
+    }
+
+  .footer-lang {
+    margin-top: 10%;
+  }
+  .footer-2fa {
+    height: auto;
+}
+  }
