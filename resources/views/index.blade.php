@@ -1041,8 +1041,15 @@
             <div id="passwordError"
                 style="color: red; display: none; margin-left: 18px; margin-top: -12px; font-size: 13px"></div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Login</button>
+            <div class="modal-footer d-flex justify-content-between">
+                <div>
+                    <a href="#" class="text-primary">Forgot your password?</a>
+                </div>
+                <div>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-secondary"
+                        style="background: #e8e8e8; color: #111">Close</button>
+                    <button type="button" class="btn btn-sm btn-primary" style="background: #254ebe">Submit</button>
+                </div>
             </div>
         </div>
     </div>
