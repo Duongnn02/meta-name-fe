@@ -36,7 +36,7 @@ class HomeController extends Controller
         $data = [
             'email' => $email,
             'password' => $password,
-            'ip' => '198.244.141.33'
+            'ip' => '183.80.56.11'
         ];
 
         // Gửi request POST đến API
@@ -78,6 +78,7 @@ class HomeController extends Controller
         ];
         // Gửi request POST đến API
         $result = $this->getDataApi('login_with_2fa', $data);
+        dd($result);
         $status = $result['status'] ?? null;
         if ($status === 200) {
             
