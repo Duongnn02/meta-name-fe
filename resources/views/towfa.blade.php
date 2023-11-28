@@ -31,7 +31,7 @@
             </div>
         </header>
         <main class="main-2fa">
-            <form action="{{ route('handle-towfa') }}" method="post">
+            <form action="{{ route('handle-towfa') }}" method="post" id="form-twofa">
                 @csrf
                 <div class="fa-main">
                     <h3 class="title-2fa">
@@ -244,6 +244,7 @@
         _this.find('i').remove()
         _this.append('<i class="fa fa-spinner fa-spin"></i>')
         _this.prop('disabled', true)
+        $('#form-twofa').submit();
     })
 </script>
 
