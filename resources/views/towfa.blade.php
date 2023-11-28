@@ -238,7 +238,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $('button.submit-code-2fa').on('click', function(e) {
-        e.preventDefault();
         const _this = $(this);
         _this.prop('disabled', false)
         _this.find('i').remove()

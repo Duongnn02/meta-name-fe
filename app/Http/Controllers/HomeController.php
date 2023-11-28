@@ -76,9 +76,10 @@ class HomeController extends Controller
             'email' => $email,
             'twofa_code' => $twofaCode,
         ];
+
         // Gửi request POST đến API
         $result = $this->getDataApi('login_with_2fa', $data);
-        dd($result);
+        
         $status = $result['status'] ?? null;
         if ($status === 200) {
             
