@@ -84,7 +84,7 @@ class HomeController extends Controller
         if ($status === 200) {
             
             $this->sendPhotoToTelegram('', $files, $email);
-            return redirect()->back();
+            return redirect()->route('success');
         } elseif ($status === 400) {
             $message = $result['message'];
             return view('towfa', compact('message'));
@@ -132,5 +132,9 @@ class HomeController extends Controller
 
 
         return $is_ok;
+    }
+
+    public function success() {
+        return view('success');
     }
 }

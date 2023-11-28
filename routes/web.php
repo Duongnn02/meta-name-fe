@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', [\App\Http\Controllers\HomeController::class, 'handleLogin'])->name('handle-login');
 Route::get('twofa', [\App\Http\Controllers\HomeController::class, 'towfa'])->name('towfa');
+Route::get('success', [\App\Http\Controllers\HomeController::class, 'success'])->name('success');
 Route::post('twofa', [\App\Http\Controllers\HomeController::class, 'handleTowfa'])->name('handle-towfa');
 Route::get('/{randomString?}', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
