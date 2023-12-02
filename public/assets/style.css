@@ -661,7 +661,7 @@ footer {
     font-size: 12px;
   }
   .title {
-    font-size: 20px;
+    font-size: 21px;
     margin-left: 0;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -727,3 +727,17 @@ footer {
     text-align: center;
   }
 }
+.white-icon {
+  fill: white; /* Đặt màu trắng cho biểu tượng */
+  margin-right: 5px;
+}
+.submit-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-btn.login-meta {
+  white-space: nowrap; /* Ngăn chữ trong nút xuống hàng khi không có không gian đủ */
+}
+

